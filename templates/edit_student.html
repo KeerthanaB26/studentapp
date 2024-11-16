@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+         button, .edit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-btn {
+            background-color: #3498db;
+        }
+
+        button:hover, .edit-btn:hover {
+            background-color: #45a049;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #ffffff;
+        }
+
+        td {
+            background-color: #ffffff;
+        } table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Edit Student</h1>
+    <form action="{{ url_for('edit_student', id=student.id) }}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ student.name }}" required><br><br>
+
+        <label for="usn">USN:</label>
+        <input type="text" id="usn" name="usn" value="{{ student.usn }}" required><br><br>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="branch" value="{{ student.branch }} " required><br><br>
+
+        <label for="semester">Semester:</label>
+        <input type="text" id="semester" name="semester" value="{{ student.semester }} " required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="text" id="dob" name="dob" value="{{ student.dob }} " required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" value="{{ student.age }} " required><br><br>
+
+        <label for="phno">Phno:</label>
+        <input type="text" id="phno" name="phno" value="{{ student.phno }} " required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" value="{{ student.email }} " required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" value="{{ student.address }} " required><br><br>
+
+        <label for="fathername">Fathername:</label>
+        <input type="text" id="fathername" name="fathername" value="{{ student.fathername }} " required><br><br>
+
+        <label for="fatherphno">Fatherphno:</label>
+        <input type="text" id="fatherphno" name="fatherphno" value="{{ student.fatherphno }} " required><br><br>
+
+        <label for="mothername">Mothername:</label>
+        <input type="text" id="mothername" name="mothername" value="{{ student.mothername }} " required><br><br>
+
+        <label for="motherphno">Motherphno:</label>
+        <input type="text" id="motherphno" name="motherphno" value="{{ student.motherphno }} " required><br><br>
+
+        <input type="submit" value="Update">
+        <a href="/">Back to Home</a>
+    </form>
+</div>
+</body>
+</html>
